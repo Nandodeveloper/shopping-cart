@@ -37,10 +37,10 @@ public class Product implements Comparable<Product>{
     public int compareTo(Product o) {
         if (this.getPrice() > o.getPrice()) {
             return -1;
-        } else if (this.getPrice() == o.getPrice()){
-            return 0;
-        } else {
+        } else if (this.getPrice() < o.getPrice()){
             return 1;
+        } else {
+            return 0;
         }
     }
 }
