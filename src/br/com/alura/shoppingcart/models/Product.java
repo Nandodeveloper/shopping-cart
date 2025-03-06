@@ -1,3 +1,5 @@
+package br.com.alura.shoppingcart.models;
+
 import java.util.ArrayList;
 
 public class Product implements Comparable<Product>{

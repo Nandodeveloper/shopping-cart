@@ -1,3 +1,5 @@
+package br.com.alura.shoppingcart.models;
+
 public class Card {
     private String user;
     private double limit;

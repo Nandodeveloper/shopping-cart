@@ -1,3 +1,8 @@
+package br.com.alura.shoppingcart.main;
+
+import br.com.alura.shoppingcart.models.Card;
+import br.com.alura.shoppingcart.models.Product;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -42,7 +47,7 @@ public class Main {
         System.out.println(asteriscos + "   \nCOMPRAS REALIZADAS:\n");
         Collections.sort(productsArray);
         for (Product p : productsArray) {
-            System.out.println("Product: " + p.getName() + " (" + p.getPrice() + ")");
+            System.out.println("br.com.alura.shoppingcart.models.Product: " + p.getName() + " (" + p.getPrice() + ")");
         }
         System.out.println();
         System.out.println(asteriscos);
