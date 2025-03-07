@@ -1,11 +1,13 @@
 package br.com.alura.shoppingcart.models;
 
-import java.util.ArrayList;
-
 public class Product implements Comparable<Product>{
     private String name;
     private double price;
-    ArrayList<Product> productsArray = new ArrayList<>();
+
+    public Product (String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
 
     public String getName() {
         return name;
@@ -22,22 +24,13 @@ public class Product implements Comparable<Product>{
     public void setPrice(double price) {
         this.price = price;
     }
-    public void menu() {
-        String asteriscos = "************************";
-        System.out.println(asteriscos + "   \nCOMPRAS REALIZADAS:\n\n");
-        for (Product product : productsArray) {
-            System.out.println(product.getName() + " - " + product.getPrice());
-        }
-        System.out.println();
-        System.out.println();
-        System.out.println(asteriscos);
-    }
+
 
     @Override
     public int compareTo(Product o) {
-        if (this.getPrice() > o.getPrice()) {
+        if (this.getPrice() < o.getPrice()) {
             return -1;
-        } else if (this.getPrice() < o.getPrice()){
+        } else if (this.getPrice() > o.getPrice()){
             return 1;
         } else {
             return 0;
